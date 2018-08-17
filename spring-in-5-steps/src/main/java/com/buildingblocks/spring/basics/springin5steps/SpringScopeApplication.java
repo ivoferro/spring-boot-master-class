@@ -3,11 +3,13 @@ package com.buildingblocks.spring.basics.springin5steps;
 import com.buildingblocks.spring.basics.springin5steps.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@ComponentScan
 public class SpringScopeApplication {
 
     private static Logger LOGGER = LoggerFactory.getLogger(SpringScopeApplication.class);
@@ -15,7 +17,7 @@ public class SpringScopeApplication {
 	public static void main(String[] args) {
 
 		ApplicationContext applicationContext =
-				SpringApplication.run(SpringScopeApplication.class, args);
+                new AnnotationConfigApplicationContext(SpringScopeApplication.class);
 
         PersonDAO aPersonDAO = applicationContext.getBean(PersonDAO.class);
         PersonDAO anotherPersonDAO = applicationContext.getBean(PersonDAO.class);
