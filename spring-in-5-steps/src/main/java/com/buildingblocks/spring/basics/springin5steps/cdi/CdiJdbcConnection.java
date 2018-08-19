@@ -1,4 +1,4 @@
-package com.buildingblocks.spring.basics.springin5steps.cdi.scope;
+package com.buildingblocks.spring.basics.springin5steps.cdi;
 
 import javax.inject.Named;
 

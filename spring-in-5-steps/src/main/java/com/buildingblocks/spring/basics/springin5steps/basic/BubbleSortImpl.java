@@ -1,8 +1,8 @@
 package com.buildingblocks.spring.basics.springin5steps.basic;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class BubbleSortImpl implements Sort {
 
     @Override

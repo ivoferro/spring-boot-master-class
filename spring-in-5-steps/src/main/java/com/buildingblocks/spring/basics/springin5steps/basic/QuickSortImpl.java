@@ -1,9 +1,9 @@
 package com.buildingblocks.spring.basics.springin5steps.basic;
 
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 @Primary
 public class QuickSortImpl implements Sort {
 
