@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Date;
 import java.util.List;
 
-@SpringBootApplication
-public class DatabaseApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class JdbcApplication implements CommandLineRunner {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -21,11 +21,13 @@ public class DatabaseApplication implements CommandLineRunner {
 	private PersonJdbcDao personJdbcDao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseApplication.class, args);
+		SpringApplication.run(JdbcApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) {
+        logger.info("-----------------------------------------------------------------------");
+
 		List<Person> persons = personJdbcDao.findAll();
 		logger.info("All persons -> {}", persons);
 
@@ -51,5 +53,7 @@ public class DatabaseApplication implements CommandLineRunner {
         logger.info("All persons -> {}", persons);
         persons = personJdbcDao.findAllWithPersonRowMapper();
         logger.info("All persons -> {}", persons);
+
+        logger.info("-----------------------------------------------------------------------");
 	}
 }

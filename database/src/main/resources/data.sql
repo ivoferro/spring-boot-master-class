@@ -1,10 +1,10 @@
-CREATE TABLE PERSON (
-  id INTEGER NOT NULL,
-  name VARCHAR(255) NOT NULL,
-  location VARCHAR(255),
-  birthdate TIMESTAMP,
-  PRIMARY KEY(id)
-);
+-- CREATE TABLE PERSON (
+--   id INTEGER NOT NULL,
+--   name VARCHAR(255) NOT NULL,
+--   location VARCHAR(255),
+--   birthdate TIMESTAMP,
+--   PRIMARY KEY(id)
+-- );
 
 INSERT INTO PERSON (id, name, location, birthdate)
 VALUES (100001, 'Ivo', 'Maia', sysdate());
